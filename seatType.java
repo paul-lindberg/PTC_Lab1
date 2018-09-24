@@ -6,19 +6,16 @@
 //   Paul Lindberg - paul.lindberg@mymail.champlain.edu
 //   Chase Bertram - chase.bertram@mymail.champlain.edu
 
-public class Airline {
+public enum seatType {
 
-	public String name;
+	 REGULAR, VIP;
+
+	  public String toString() {
+	    switch(this) {
+	      case REGULAR: return "regular";
+	      case VIP: return "vip";
+	      default:       return "unspecified";
+	    }
+	  }
 	
-	public Airline(String name) {
-		
-		this.name = name;
-		
-	}
-
-	@Override
-	public String toString() {
-		return "Airline [name=" + name + "]";
-	}
-
 }
